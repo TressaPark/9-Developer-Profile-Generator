@@ -16,7 +16,7 @@ Currently no installations have been made.
 <!-- You will see once I figure out how to do this!!! :) -->
 
 ## Contact
-github username: TressaPark
+github username: TressaPark  
 github email: tressapark@gmail.com
 
 ## Contributors
