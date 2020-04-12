@@ -13,7 +13,7 @@ HTML, JavaScript, Node.js
 Currently no installations have been made.
 
 ## Badges
-You will see once I figure out how to do this!!! :)
+https://img.shields.io/eclipse-marketplace/last-update/tressapark
 
 ## Contact
 github username: TressaPark  
