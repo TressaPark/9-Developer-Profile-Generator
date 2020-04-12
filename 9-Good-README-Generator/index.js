@@ -1,23 +1,24 @@
+// inquirer set up
 const inquirer = require("inquirer");
+// api call
 const apiCall = require("./api");
-function init() = require("util");
-
-const writeFileAsync = util.promisify(fs.writeFile);
-
-function promptUser() {
-  return inquirer.prompt([
+// answers
+function init() {
+// questions for user
+inquirer.prompt([
+  {
+    type: "input",
+    name: "title",
+    message: "Enter your project title."
+  },
+  {
+    type: "input",
+    name: "description",
+    message: "Enter your project description."
+  },  
     {
-      type: "input",
-      name: "user name",
-      message: "What is your Github username?"
-    },
-    {
-      type: "input",
-      name: "github email",
-      message: "Enter your Github email."
-    },
-    {
-      type: "input",
+      // I think this is actually done in the api.js code
+      // type: "input",
       // name: "github profile picture",
       // message: "Include your Github profile picture."
     },
@@ -27,16 +28,7 @@ function promptUser() {
       message: "What are your project badges?"
     },
     {
-      type: "input",
-      name: "project title",
-      message: "What is your project title?"
-    },
-    {
-      type: "input",
-      name: "project description",
-      message: "What is your project description?"
-    },
-    {
+      // I want the TOC to have hyperlinks to the various areas of the README. Not sure how to do that in code.
       type: "input",
       name: "table of contents",
       message: "Enter your table of contents."
@@ -44,18 +36,17 @@ function promptUser() {
     {
       type: "input",
       name: "installation",
-      //I don't understand the meaning of this question
-      //message: "Enter your "
+      message: "Enter the installation instructions for your program."
     },
     {
       type: "input",
-      // name: "usage",
-      // message: "Enter your"
+      name: "usage",
+      message: "Enter any additional information not included in the description."
     },
     {
       type: "input",
-      // name: "license",
-      // message: "Enter your"
+      name: "license",
+      message: "Enter the license name and link to the license content."
     },
     {
       type: "input",
@@ -64,43 +55,24 @@ function promptUser() {
     },
     {
       type: "input",
-      // name: "tests",
-      // message: "Enter your."
+      name: "tests",
+      message: "Explain how to run the automated tests for this system."
     },
     {
       type: "input",
-      // name: "tests",
-      // message: "Enter your."
-      },
-    }
+      name: "user name",
+      message: "Enter your Github username."
+    },
+    {
+      type: "input",
+      name: "github email",
+      message: "Enter your Github email."
+    },
   ]);
 
 function generateHTML(answers) 
-{
-  return `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <title>Document</title>
-</head>
-<body>
-  <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Hi! My name is ${answers.name}</h1>
-    <p class="lead">I am from ${answers.location}.</p>
-    <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
-    <ul class="list-group">
-      <li class="list-group-item">My GitHub username is ${answers.github}</li>
-      <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
-    </ul>
-  </div>
-</div>
-</body>
-</html>`;
-}
+// {
+//   return
 
 promptUser()
   .then(function(answers) {
@@ -114,3 +86,5 @@ promptUser()
   .catch(function(err) {
     console.log(err);
   });
+}
+  // Thank you to my tutor Vivian Nguyen, Jill  Westerfelhaus, wikipedia.com, welcometothejungle.com, and my classwork at NU.
