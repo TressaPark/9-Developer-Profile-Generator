@@ -13,7 +13,7 @@ HTML, JavaScript, Node.js
 Currently no installations have been made.
 
 ## Badges
-<img src = "https://img.shields.io/eclipse-marketplace/last-update/tressapark">
+<img src = "https://img.shields.io/badge/Tressa%20Park-README-red">
 
 ## Contact
 github username: TressaPark  
