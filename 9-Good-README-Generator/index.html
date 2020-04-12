@@ -30,7 +30,7 @@ const genResponse = {
   <p><input type="text" name= "description" value="">${response.description}</p>
 <h2 id="installations">Installations</h2>
   <p><input type="text" name="installations" value="">${response.installations}</p>
-<h2 id="usage">usage</h2>
+<h2 id="usage">Usage</h2>
   <p><input type="text" name="usage" value="">${response.usage}</p>
 <h2 id="license">License</h2>
   <p>License for this project is <input type="text" name="license" value ="">${response.license}</p>
@@ -43,12 +43,13 @@ const genResponse = {
 <h2 id="contact">Contact for Further Information</h2>
   <p>Please feel free to email <input type="text" name="email" value="">${response.email} if you have additional questions.  Thank you.</p>
 
-<!-- write file to markdown folder -->
+<!-- create README file -->
+
 fs.writeFile("README.md",userInfo,function(err) {
   if (err) {
     return console.log(err)
   }
-console.log ("Success!")
+console.log ("Good Job!")
 }) 
   }
 }
