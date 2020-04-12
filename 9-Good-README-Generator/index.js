@@ -28,7 +28,7 @@ inquirer.prompt([
       message: "What are your project badges?"
     },
     {
-      // I want the TOC to have hyperlinks to the various areas of the README. Not sure how to do that in code.
+      // I want the TOC to have hyperlinks to the various areas of the README. Maybe this will work out as I go along?
       type: "input",
       name: "table of contents",
       message: "Enter your table of contents."
@@ -74,17 +74,19 @@ function generateHTML(answers)
 // {
 //   return
 
-promptUser()
-  .then(function(answers) {
-    const html = generateHTML(answers);
+// Is the code below corrret?
 
-    return writeFileAsync("index.html", html);
-  })
-  .then(function() {
-    console.log("Successfully wrote to index.html");
-  })
-  .catch(function(err) {
-    console.log(err);
-  });
+// promptUser()
+//   .then(function(answers) {
+//     const html = generateHTML(answers);
+
+//     return writeFileAsync("index.html", html);
+//   })
+//   .then(function() {
+//     console.log("Successfully wrote to index.html");
+//   })
+//   .catch(function(err) {
+//     console.log(err);
+//   });
 }
   // Thank you to my tutor Vivian Nguyen, Jill  Westerfelhaus, wikipedia.com, welcometothejungle.com, and my classwork at NU.
