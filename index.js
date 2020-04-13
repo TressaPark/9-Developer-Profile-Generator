@@ -1,7 +1,7 @@
 // inquirer set up
 const inquirer = require("inquirer");
 // api call
-const apiCall = require("./api");
+const apiCall = require("./utils/api");
 // answers
 function init() {
 // questions for user
@@ -69,8 +69,9 @@ inquirer.prompt([
       message: "Enter your Github email."
     },
   ]);
+}
 
-function generateHTML(answers) 
+//function generateHTML(answers) 
 // {
 //   return
 
@@ -88,5 +89,5 @@ function generateHTML(answers)
 //   .catch(function(err) {
 //     console.log(err);
 //   });
-}
-  // Thank you to my tutor Vivian Nguyen, Jill  Westerfelhaus, wikipedia.com, welcometothejungle.com, and my classwork at NU.
+//}
+// Thank you to my tutor Vivian Nguyen, Jill  Westerfelhaus, wikipedia.com, welcometothejungle.com, and my classwork at NU
