@@ -1,0 +1,25 @@
+{
+  "name": "9-good-readme-generator",
+  "version": "1.0.0",
+  "description": "## Description A command-line application that dynamically generates a README.md from a user's input.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TressaPark/9-Good-README-Generator.git"
+  },
+  "keywords": [
+    "ReadMeGen"
+  ],
+  "author": "Tressa Park",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TressaPark/9-Good-README-Generator/issues"
+  },
+  "homepage": "https://github.com/TressaPark/9-Good-README-Generator#readme",
+  "dependencies": {
+    "inquirer": "^7.1.0"
+  }
+}
