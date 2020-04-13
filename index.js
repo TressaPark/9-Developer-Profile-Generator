@@ -3,7 +3,7 @@ const inquirer = require("inquirer");
 // api call
 const apiCall = require("./utils/api");
 // answers
-function init() {
+function promptUser() {
 // questions for user
 inquirer.prompt([
   {
@@ -16,12 +16,12 @@ inquirer.prompt([
     name: "description",
     message: "Enter your project description."
   },  
-    {
-      // I think this is actually done in the api.js code
-      // type: "input",
-      // name: "github profile picture",
-      // message: "Include your Github profile picture."
-    },
+    // {
+    //   // I think this is actually done in the api.js code
+    //   // type: "input",
+    //   // name: "github profile picture",
+    //   // message: "Include your Github profile picture."
+    // },
     {
       type: "input",
       name: "badges",
@@ -77,17 +77,19 @@ inquirer.prompt([
 
 // Is the code below corrret?
 
-// promptUser()
-//   .then(function(answers) {
-//     const html = generateHTML(answers);
+promptUser()
+  // .then(function(answers) {
+  //   const html = generateHTML(answers);
 
-//     return writeFileAsync("index.html", html);
-//   })
-//   .then(function() {
-//     console.log("Successfully wrote to index.html");
-//   })
-//   .catch(function(err) {
-//     console.log(err);
-//   });
-//}
+  //   return writeFileAsync("index.html", html);
+  // })
+  // .then(function() {
+  //   console.log("Successfully wrote to index.html");
+  // })
+  // .catch(function(err) {
+  //   console.log(err);
+  // });
+
+
+
 // Thank you to my tutor Vivian Nguyen, Jill  Westerfelhaus, wikipedia.com, welcometothejungle.com, and my classwork at NU
