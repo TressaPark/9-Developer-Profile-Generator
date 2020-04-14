@@ -1,11 +1,17 @@
 // inquirer set up
 const inquirer = require("inquirer");
 // api call
+
+const fs = require("fs");
+const util= require("util");
 const apiCall = require("./utils/api");
+
+const writeFileAsync = util.promisify(fs.writeFile);
+
 // answers
 function promptUser() {
 // questions for user
-inquirer.prompt([
+return inquirer.prompt([
   {
     type: "input",
     name: "title",
@@ -22,11 +28,11 @@ inquirer.prompt([
     //   // name: "github profile picture",
     //   // message: "Include your Github profile picture."
     // },
-    {
-      type: "input",
-      name: "badges",
-      message: "What are your project badges?"
-    },
+    // {
+    //   type: "input",
+    //   name: "badges",
+    //   message: "What are your project badges?"
+    // },
     {
       // I want the TOC to have hyperlinks to the various areas of the README. Maybe this will work out as I go along?
       type: "input",
@@ -60,7 +66,7 @@ inquirer.prompt([
     },
     {
       type: "input",
-      name: "user name",
+      name: "username",
       message: "Enter your Github username."
     },
     {
@@ -77,18 +83,53 @@ inquirer.prompt([
 
 // Is the code below corrret?
 
-promptUser()
-  // .then(function(answers) {
-  //   const html = generateHTML(answers);
+// async function init(){
+//   console.log("hi")
+//   try {
+//     const answers = await promptUser()
+//       .then(function(answers) {
 
-  //   return writeFileAsync("index.html", html);
-  // })
-  // .then(function() {
-  //   console.log("Successfully wrote to index.html");
-  // })
-  // .catch(function(err) {
-  //   console.log(err);
-  // });
+
+//     const html=  apiCall.getUser(answers.username, answers);
+//     // const html = generateHTML(answers);
+
+     
+//   }).then(function(html){
+//     writeFileAsync("index.html", html);
+//     console.log("Successfully wrote to index.html");
+//   })
+    
+//   // const html = await apiCall.getUser(answers.username, answers);
+
+//   // await writeFileAsync("index.html", html);
+    
+
+   
+//   } catch(err) {
+//     console.log(err);
+//   }
+// }
+
+promptUser().then(function(answer){
+  apiCall.getUser(answer.username, answer);
+});
+
+
+
+// promptUser()
+//   .then(function(answers) {
+
+//     const html= apiCall.getUser(answers.username, answers);
+//     // const html = generateHTML(answers);
+
+//      return writeFileAsync("index.html", html);
+//   })
+//   .then(function() {
+//     console.log("Successfully wrote to index.html");
+//   })
+//   .catch(function(err) {
+//     console.log(err);
+//   });
 
 
 
