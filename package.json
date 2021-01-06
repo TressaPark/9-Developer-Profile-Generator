@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/TressaPark/9-Good-README-Generator#readme",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "inquirer": "^7.1.0",
     "util": "^0.12.2"
